@@ -2,29 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 95vw;
-}
-
-button {
-  outline: none;
-  border: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  cursor: pointer;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-
-ul,
-li {
+* {
   margin: 0;
   padding: 0;
 }
@@ -57,19 +35,4 @@ li {
   width: 200px;
   height: 20px;
   flex: 1;
-}
-
-.refresh {
-  padding: 10px;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  width: 20px;
-  height: 20px;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
