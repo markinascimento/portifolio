@@ -1,5 +1,5 @@
 // -> NextJS
-import { Poppins } from "next/font/google";
+import { Sora } from "next/font/google";
 
 // -> Utils
 import { cn } from "@/lib/utils";
@@ -10,7 +10,11 @@ import "./globals.css";
 // -> Types
 import type { Metadata } from "next";
 
-const poppins = Poppins({ subsets: ["latin"], weight: '400' });
+// -> Components
+import { MenuDesktop } from "@/components/menu/menu-desktop";
+import { MenuMobile } from "@/components/menu/menu-mobile";
+
+const soraFont = Sora({ subsets: ["latin"], weight: '400' });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,11 +30,18 @@ export default function RootLayout({
     <html lang="pt-BR" className="h-full w-full">
       <body 
         className={cn(
-          'flex flex-1 w-full h-full bg-zinc-950 text-zinc-100',
-          poppins.className
+          'flex flex-col flex-1 w-full h-full bg-background lg:gap-2',
+          soraFont.className
         )}
       >
-        {children}
+        <section className="w-full min-h-16">
+          <MenuMobile />
+          <MenuDesktop />
+        </section>
+
+        <section className="flex flex-1 w-full max-w-[1304px] h-full px-3 m-auto">
+          {children}
+        </section>
       </body>
     </html>
   );
