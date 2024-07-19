@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const variants = {
   open: {
@@ -26,7 +27,9 @@ export const MenuItem = () => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <span> path </span>
+      <Link href="#" className="inline-block cursor-pointer">
+        <span> path </span>
+      </Link>
     </motion.li>
   );
 };

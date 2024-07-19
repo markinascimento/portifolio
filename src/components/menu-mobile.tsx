@@ -57,13 +57,16 @@ export function MenuMobile() {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={0}
-      className="absolute top-0 bottom-0 right-0 w-[95vw] md:hidden"
+      className="absolute top-0 bottom-0 right-0 w-[70vw] md:hidden"
     >
       <motion.div
-        className="absolute inset-0 bg-zinc-900/10 backdrop-blur-xl w-full"
+        className="absolute inset-0 bg-indigo-600 backdrop-blur-sm w-full"
         variants={sidebarOptions}
       >
-        <motion.ul variants={variants}>
+        <motion.ul
+          className="flex flex-col w-full max-w-[80%] mt-16 space-y-4 pl-6 m-auto"
+          variants={variants}
+        >
           {Array.from({ length: 4 }).map((_, i) => (
             <MenuItem key={i} />
           ))}
