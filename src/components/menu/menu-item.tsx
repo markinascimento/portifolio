@@ -25,11 +25,11 @@ export function MenuItem({ name, path, Icon }: IMenuItemProps) {
   return (
     <li className={cn(
       'flex items-center justify-center min-h-9 px-4 rounded-full text-white',
-      isActive ? 'bg-pallet-red opacity-100' : 'bg-transparent opacity-60'
+      isActive ? 'bg-pallet-red' : 'bg-transparent hover:opacity-75 transition-opacity'
     )}>
       <Link href={path} className='flex gap-2 items-center'>
         <Icon className='size-5' strokeWidth={2.5} />
-        <span className='font-semibold text-lg'> {name} </span>
+        <span className='font-semibold'> {name} </span>
       </Link>
     </li>
   )

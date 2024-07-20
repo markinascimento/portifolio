@@ -7,7 +7,7 @@ import { useCallback, useState } from "react";
 import Image from 'next/image';
 
 // -> Icons lib
-import { CloudDownload, Home } from "lucide-react";
+import { Award, CloudDownload, Home, Mail, User } from "lucide-react";
 
 // -> Utils
 import { cn } from "@/lib/utils";
@@ -71,9 +71,9 @@ export function MenuMobile() {
 
         <ul className='flex flex-col items-center w-full h-full space-y-6 mt-14'>
           <MenuItem Icon={Home} name="Inicio" path="/" />
-          <MenuItem Icon={Home} name="Sobre" path="/about" />
-          <MenuItem Icon={Home} name="Projetos" path="/projects" />
-          <MenuItem Icon={Home} name="Contate-me" path="/contact" />
+          <MenuItem Icon={User} name="Sobre" path="/about" />
+          <MenuItem Icon={Award} name="Projetos" path="/projects" />
+          <MenuItem Icon={Mail} name="Contato" path="/contact" />
         </ul>
 
         <footer className="p-4 mt-2">
