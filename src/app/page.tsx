@@ -2,6 +2,7 @@
 
 // -> NextJS
 import Image from "next/image";
+import Link from "next/link";
 
 // -> Components
 import { CircularText } from "@/components/circular-text";
@@ -15,23 +16,34 @@ export default function Home() {
     <Container>
       <Image src={img} alt="wdlqkjwd" priority className="" />
 
-      <section className="flex flex-col items-start justify-center px-2 gap-4">
-        <h1 className="text-5xl text-white font-semibold w-[615px]">
+      <section className="flex flex-col items-center justify-center w-full h-full pr-6 gap-4 lg:items-start lg:w-1/2">
+        <h1 className="text-2xl text-white font-semibold lg:text-5xl">
           Transformando ideias em <br />
           <strong className="text-pallet-red"> aplicações reais </strong>
         </h1>
 
-        <p className="w-full max-w-[615px] text-zinc-300 font-medium tracking-[-0.5px]">
+        <p className="w-full text-zinc-300 text-left font-medium tracking-[-0.5px] break-words lg:max-w-[615px]">
           Como um desenvolvedor full-stack qualificado, me dedico a transformar
           ideias em aplicações web inovadoras. Explore meus projetos e artigos
           mais recentes, mostrando minha experiência em React.js e
           desenvolvimento web
         </p>
 
-        <div className="flex gap-4">
-          <button> 1 </button>
-          <button> 2 </button>
-        </div>
+        <footer className="grid grid-cols-2 gap-2 w-1/2 mx-auto">
+          <Link
+            href="#"
+            className="flex items-center justify-center min-h-12 bg-pallet-red rounded-lg text-zinc-100 font-semibold hover:opacity-80 transition-opacity"
+          >
+            Download CV
+          </Link>
+
+          <Link
+            href="/contact"
+            className="flex items-center justify-center min-h-12 rounded-lg text-zinc-100 font-semibold hover:underline"
+          >
+            Contato
+          </Link>
+        </footer>
       </section>
 
       <CircularText />
