@@ -1,5 +1,7 @@
+// -> ReactJS
 import { forwardRef, type ComponentProps } from "react";
 
+// -> Types
 interface IInputProps extends ComponentProps<"input"> {
   className?: string;
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/button";
 // -> Components
 import { Container } from "@/components/container";
 import { Input } from "@/components/input";
@@ -10,6 +11,9 @@ export default function Contact() {
       <form className="flex flex-col gap-4 w-full max-w-[500px] px-4 mx-auto">
         <Input placeholder="Nome" />
         <Input type="email" placeholder="E-mail" />
+        <Button>
+          <span> Enviar </span>
+        </Button>
       </form>
     </Container>
   );
