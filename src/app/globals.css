@@ -7,22 +7,17 @@
   padding: 0;
 }
 
-.slide-in {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #0f0f0f;
-  transform-origin: bottom;
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 8px;
 }
 
-.slide-out {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #0f0f0f;
-  transform-origin: top;
+::-webkit-scrollbar-track {
+  background-color: #495867;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 8px;
 }

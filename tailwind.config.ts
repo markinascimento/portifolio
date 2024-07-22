@@ -8,8 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        "meteor-effect": "meteor 5s linear infinite",
+        "spin-slow": "spin 5s linear infinite",
+      },
       backgroundImage: {
-        "background": "linear-gradient(307deg, #495867 6.91%, #577399 76.39%)",
+        background: "linear-gradient(307deg, #495867 6.91%, #577399 76.39%)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -20,8 +24,18 @@ const config: Config = {
         "pallet-red": "#FE5F55",
         "pallet-cyan": "#BDD5EA",
         "pallet-sky": "#BDD5EA",
-        "pallet-white": "#F7F7FF"
-      }
+        "pallet-white": "#F7F7FF",
+      },
+      keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+      },
     },
   },
   plugins: [],

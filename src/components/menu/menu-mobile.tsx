@@ -4,7 +4,7 @@
 import { useCallback, useState } from "react";
 
 // -> NextJS
-import Image from 'next/image';
+import Image from "next/image";
 
 // -> Icons lib
 import { Award, CloudDownload, Home, Mail, User } from "lucide-react";
@@ -16,64 +16,72 @@ import { cn } from "@/lib/utils";
 import { MenuItem } from "./menu-item";
 
 // -> Images
-import closeMenuIcon from '@/assets/burguer-bitten-icon.svg';
-import openMenuIcon from '@/assets/burguer-icon.svg';
+import closeMenuIcon from "@/assets/burguer-bitten-icon.svg";
+import openMenuIcon from "@/assets/burguer-icon.svg";
 import logo from "@/assets/logo-portifolio.svg";
 
 export function MenuMobile() {
   const [isOpen, setOpen] = useState(false);
 
   const openSidebar = useCallback(() => {
-    setOpen(true)
-  }, [])
+    setOpen(true);
+  }, []);
 
   const closeSidebar = useCallback(() => {
-    setOpen(false)
-  }, [])
+    setOpen(false);
+  }, []);
 
   return (
     <nav className="lg:hidden">
-      <Image 
-        src={logo} 
-        alt="Logo" 
-        className="size-12 absolute top-3 left-3" 
-        priority 
+      <Image
+        src={logo}
+        alt="Logo"
+        className="size-12 absolute top-3 left-3"
+        priority
       />
 
-      <button
-          onClick={openSidebar}
-          className="absolute right-3 top-3"
-        >
-          <Image 
-            src={openMenuIcon} 
-            alt="Menu hamburguer icon" 
-            property="" 
-            className="w-6 h-6"
-          />
+      <button onClick={openSidebar} className="absolute right-3 top-3">
+        <Image
+          src={openMenuIcon}
+          alt="Menu hamburguer icon"
+          property=""
+          className="w-6 h-6"
+        />
       </button>
 
       <aside
         className={cn(
-          'bg-pallet-secondary flex flex-col fixed w-[75vw] right-[-100%] h-full flex-1 duration-700 z-10',
-          isOpen && 'right-0'
+          "bg-pallet-secondary flex flex-col fixed w-[75vw] right-[-100%] h-full flex-1 duration-700 z-10",
+          isOpen && "right-0"
         )}
       >
-        <header className='flex w-full items-center justify-end pt-3 pr-3'>
+        <header className="flex w-full items-center justify-end pt-3 pr-3">
           <button type="button" onClick={closeSidebar}>
-            <Image 
-              src={closeMenuIcon} 
-              alt="Menu hamburguer icon" 
-              property="" 
+            <Image
+              src={closeMenuIcon}
+              alt="Menu hamburguer icon"
+              property=""
               className="w-6 h-6"
             />
           </button>
         </header>
 
-        <ul className='flex flex-col items-center w-full h-full space-y-6 mt-14'>
-          <MenuItem Icon={Home} name="Inicio" path="/" />
-          <MenuItem Icon={User} name="Sobre" path="/about" />
-          <MenuItem Icon={Award} name="Projetos" path="/projects" />
-          <MenuItem Icon={Mail} name="Contato" path="/contact" />
+        <ul className="flex flex-col items-center w-full h-full space-y-6 mt-14">
+          <button onClick={closeSidebar}>
+            <MenuItem Icon={Home} name="Inicio" path="/" />
+          </button>
+
+          <button onClick={closeSidebar}>
+            <MenuItem Icon={User} name="Sobre" path="/about" />
+          </button>
+
+          <button onClick={closeSidebar}>
+            <MenuItem Icon={Award} name="Projetos" path="/projects" />
+          </button>
+
+          <button onClick={closeSidebar}>
+            <MenuItem Icon={Mail} name="Contato" path="/contact" />
+          </button>
         </ul>
 
         <footer className="p-4 mt-2">
