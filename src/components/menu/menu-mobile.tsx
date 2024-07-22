@@ -85,6 +85,21 @@ export function MenuMobile() {
         </ul>
 
         <footer className="p-4 mt-2">
+          <section className="flex items-center justify-between mb-4 gap-1 bg-blue-500">
+            <button className="bg-pallet-secondary w-12 h-12 rounded-full text-white hover:bg-pallet-red">
+              Wha
+            </button>
+            <button className="bg-pallet-secondary w-12 h-12 rounded-full text-white hover:bg-pallet-red">
+              Git
+            </button>
+            <button className="bg-pallet-secondary w-12 h-12 rounded-full text-white hover:bg-pallet-red">
+              Lin
+            </button>
+            <button className="bg-pallet-secondary w-12 h-12 rounded-full text-white hover:bg-pallet-red">
+              Ins
+            </button>
+          </section>
+
           <a href="#">
             <div className="flex items-center justify-center gap-2 w-full h-11 rounded-full bg-red-500 text-zinc-100">
               <CloudDownload className="size-5" strokeWidth={3} />
