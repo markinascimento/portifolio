@@ -18,7 +18,7 @@ import whatsapp from "@/assets/whatsapp.png";
 export default function Contact() {
   return (
     <Container className="w-full h-full px-2 lg:px-0">
-      <main className="space-y-4 w-full max-w-[568px] pl-2 pr-4">
+      <main className="space-y-4 w-full max-w-[568px] px-2">
         <form className="flex flex-col gap-4 w-full mx-auto">
           <h1 className="w-full font-bold text-center text-xl text-pallet-white mb-8 lg:text-3xl">
             Vamos <strong className="text-pallet-red"> conversar ? </strong>
