@@ -18,7 +18,11 @@ import { MenuItem } from "./menu-item";
 // -> Images
 import closeMenuIcon from "@/assets/burguer-bitten-icon.svg";
 import openMenuIcon from "@/assets/burguer-icon.svg";
+import github from "@/assets/github.png";
+import linkedin from "@/assets/linkedin.png";
 import logo from "@/assets/logo-portifolio.svg";
+import whatsapp from "@/assets/whatsapp.png";
+import { SocialButtonLink } from "../social-button-link";
 
 export function MenuMobile() {
   const [isOpen, setOpen] = useState(false);
@@ -85,19 +89,28 @@ export function MenuMobile() {
         </ul>
 
         <footer className="p-4 mt-2">
-          <section className="flex items-center justify-between mb-4 gap-2 bg-blue-500">
-            <button className="bg-pallet-secondary w-12 h-12 rounded-full text-white hover:bg-pallet-red">
-              Wha
-            </button>
-            <button className="bg-pallet-secondary w-12 h-12 rounded-full text-white hover:bg-pallet-red">
-              Git
-            </button>
-            <button className="bg-pallet-secondary w-12 h-12 rounded-full text-white hover:bg-pallet-red">
-              Lin
-            </button>
-            <button className="bg-pallet-secondary w-12 h-12 rounded-full text-white hover:bg-pallet-red">
-              Ins
-            </button>
+          <section className="flex items-center justify-center mb-4 gap-8">
+            <SocialButtonLink link="https://github.com/markinascimento">
+              <Image src={github} alt="Logo do github" width={32} height={32} />
+            </SocialButtonLink>
+
+            <SocialButtonLink link="https://linkedin.com/in/marcos-viniciu5">
+              <Image
+                src={linkedin}
+                alt="Logo do linkedin"
+                width={28}
+                height={28}
+              />
+            </SocialButtonLink>
+
+            <SocialButtonLink link="https://wa.me/5583998929330?text=">
+              <Image
+                src={whatsapp}
+                alt="Logo do whatsapp"
+                width={32}
+                height={32}
+              />
+            </SocialButtonLink>
           </section>
 
           <a href="#">
