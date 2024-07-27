@@ -1,34 +1,27 @@
-// -> ReactJS
-import { useState, type ChangeEvent, type FormEvent } from "react";
-
 // -> Query lib
 import { useMutation } from "react-query";
+
+// -> Input li
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+
+// -> Toast lib
+import toast from "react-hot-toast";
 
 // -> API
 import EmailServices, { type ISendProps } from "@/services/EmailServices";
 
-// -> Utils
-import { isValidEmail } from "@/lib/isValidEmail";
-
 // -> Types
-export interface IUserProps {
-  name: string;
-  email: string;
-}
-export interface IAddressProps {
-  subject: string;
-  body: string;
-}
+import { schemaForm, type FormSchema } from "./schema";
 
 export function useContactController() {
-  const [user, setUser] = useState<IUserProps>({
-    name: "",
-    email: "",
-  });
-
-  const [address, setAddress] = useState<IAddressProps>({
-    body: "",
-    subject: "",
+  const {
+    reset,
+    register,
+    formState: { errors, isValid },
+    handleSubmit: handleSubmitForm,
+  } = useForm<FormSchema>({
+    resolver: zodResolver(schemaForm),
   });
 
   const { mutateAsync, isLoading } = useMutation({
@@ -37,66 +30,21 @@ export function useContactController() {
     },
   });
 
-  function handleChangeInputName(event: ChangeEvent<HTMLInputElement>) {
-    setUser({
-      ...user,
-      name: event.target.value,
-    });
-  }
-
-  function handleChangeInputEmail(event: ChangeEvent<HTMLInputElement>) {
-    setUser({
-      ...user,
-      email: event.target.value,
-    });
-  }
-
-  function handleChangeInputBody(event: ChangeEvent<HTMLTextAreaElement>) {
-    setAddress({
-      ...address,
-      body: event.target.value,
-    });
-  }
-
-  function handleChangeInputSubject(event: ChangeEvent<HTMLInputElement>) {
-    setAddress({
-      ...address,
-      subject: event.target.value,
-    });
-  }
-
-  async function handleSubmitForm(event: FormEvent) {
-    event.preventDefault();
+  const handleSubmit = handleSubmitForm(async (data) => {
     try {
-      const params = {
-        name: user.name,
-        email: user.email,
-        body: address.body,
-        subject: address.subject,
-      };
-
-      await mutateAsync(params);
-    } catch (error) {
-      console.log({ error });
+      await mutateAsync(data);
+      reset();
+      toast.success("E-mail enviado com sucesso :)");
+    } catch {
+      toast.error("Erro ao enviar o e-mail, tente novamente em instantes :(");
     }
-  }
-
-  const disabledButton =
-    !user.email ||
-    !user.name ||
-    !address.body ||
-    !address.subject ||
-    !isValidEmail(user.email);
+  });
 
   return {
-    user,
-    address,
+    errors,
+    isValid,
     isLoading,
-    disabledButton,
-    handleSubmitForm,
-    handleChangeInputName,
-    handleChangeInputEmail,
-    handleChangeInputBody,
-    handleChangeInputSubject,
+    register,
+    handleSubmit,
   };
 }

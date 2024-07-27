@@ -10,6 +10,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 // -> Motion lib
 import { AnimatePresence, motion } from "framer-motion";
 
+// -> Toast lib
+import { Toaster } from "react-hot-toast";
+
 // -> Utils
 import { cn } from "@/lib/utils";
 
@@ -42,6 +45,8 @@ export default function RootLayout({
         )}
       >
         <QueryClientProvider client={queryClient}>
+          <Toaster />
+
           <section className="w-full min-h-16">
             <MenuMobile />
             <MenuDesktop />

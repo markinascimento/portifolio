@@ -19,23 +19,14 @@ import linkedin from "@/assets/linkedin.png";
 import whatsapp from "@/assets/whatsapp.png";
 
 export default function Contact() {
-  const {
-    user,
-    address,
-    isLoading,
-    disabledButton,
-    handleSubmitForm,
-    handleChangeInputEmail,
-    handleChangeInputName,
-    handleChangeInputBody,
-    handleChangeInputSubject,
-  } = useContactController();
+  const { errors, isValid, isLoading, register, handleSubmit } =
+    useContactController();
 
   return (
     <Container className="w-full h-full px-2 lg:px-0">
       <main className="space-y-4 w-full max-w-[568px] px-2">
         <form
-          onSubmit={handleSubmitForm}
+          onSubmit={handleSubmit}
           className="flex flex-col gap-4 w-full mx-auto"
         >
           <h1 className="w-full font-bold text-center text-xl text-pallet-white mb-8 lg:text-3xl">
@@ -45,31 +36,31 @@ export default function Contact() {
           <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
             <Input
               placeholder="Nome"
-              value={user.name}
-              onChange={handleChangeInputName}
+              error={errors.name?.message}
+              {...register("name")}
             />
             <Input
               type="email"
               placeholder="E-mail"
-              value={user.email}
-              onChange={handleChangeInputEmail}
+              error={errors.email?.message}
+              {...register("email")}
             />
           </div>
 
           <Input
             placeholder="Assunto"
-            value={address.subject}
-            onChange={handleChangeInputSubject}
+            error={errors.subject?.message}
+            {...register("subject")}
           />
 
           <Textarea
             placeholder="Mensagem"
-            value={address.body}
-            onChange={handleChangeInputBody}
+            error={errors.body?.message}
+            {...register("body")}
           />
 
           <div className="mt-4">
-            <Button type="submit" loading={isLoading} disabled={disabledButton}>
+            <Button type="submit" loading={isLoading} disabled={!isValid}>
               <span> Conversar </span>
             </Button>
           </div>
