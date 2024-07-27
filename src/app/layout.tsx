@@ -4,6 +4,9 @@
 import { Sora } from "next/font/google";
 import { usePathname } from "next/navigation";
 
+// -> Query lib
+import { QueryClient, QueryClientProvider } from "react-query";
+
 // -> Motion lib
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -12,8 +15,6 @@ import { cn } from "@/lib/utils";
 
 // -> Styles CSS
 import "./globals.css";
-
-// -> Types
 
 // -> Components
 import { MenuDesktop } from "@/components/menu/menu-desktop";
@@ -30,6 +31,8 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname();
 
+  const queryClient = new QueryClient();
+
   return (
     <html lang="pt-BR" className="h-full w-full">
       <body
@@ -38,25 +41,27 @@ export default function RootLayout({
           soraFont.className
         )}
       >
-        <section className="w-full min-h-16">
-          <MenuMobile />
-          <MenuDesktop />
-        </section>
+        <QueryClientProvider client={queryClient}>
+          <section className="w-full min-h-16">
+            <MenuMobile />
+            <MenuDesktop />
+          </section>
 
-        <section className="flex w-full max-w-[1304px] h-[89vh] m-auto overflow-x-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div key={pathname}>
-              <div className="w-screen h-full relative">
-                <Meteors number={20} />
+          <section className="flex w-full max-w-[1304px] h-[89vh] m-auto overflow-x-hidden">
+            <AnimatePresence mode="wait">
+              <motion.div key={pathname}>
+                <div className="w-screen h-full relative">
+                  <Meteors number={20} />
 
-                {children}
-              </div>
+                  {children}
+                </div>
 
-              <TransitionPageSlider position="bottom" />
-              <TransitionPageSlider position="top" />
-            </motion.div>
-          </AnimatePresence>
-        </section>
+                <TransitionPageSlider position="bottom" />
+                <TransitionPageSlider position="top" />
+              </motion.div>
+            </AnimatePresence>
+          </section>
+        </QueryClientProvider>
       </body>
     </html>
   );
