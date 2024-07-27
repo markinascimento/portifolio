@@ -113,7 +113,11 @@ export function MenuMobile() {
             </SocialButtonLink>
           </section>
 
-          <a href="#">
+          <a
+            type="button"
+            download="currículo - Marcos Vinicius.pdf"
+            href="/currículo.pdf"
+          >
             <div className="flex items-center justify-center gap-2 w-full h-11 rounded-full bg-red-500 text-zinc-100">
               <CloudDownload className="size-5" strokeWidth={3} />
               <span className="font-semibold"> Download CV </span>

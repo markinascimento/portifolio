@@ -31,12 +31,14 @@ export default function Home() {
         />
 
         <footer className="grid grid-cols-2 gap-2 w-full mx-auto lg:w-1/2">
-          <Link
-            href="#"
+          <a
+            type="button"
+            download="currículo - Marcos Vinicius.pdf"
+            href="/currículo.pdf"
             className="flex items-center justify-center min-h-12 bg-pallet-red rounded-lg text-zinc-100 font-semibold hover:opacity-80 transition-opacity"
           >
             Download CV
-          </Link>
+          </a>
 
           <Link
             href="/contact"
