@@ -16,7 +16,7 @@ export default function Home() {
     <Container className="overflow-hidden">
       <Image src={img} alt="wdlqkjwd" priority />
 
-      <section className="flex flex-col items-center justify-center w-full h-full pr-6 gap-4 lg:items-start lg:w-1/2">
+      <aside className="flex flex-col items-center justify-center w-full h-full px-4 gap-4 lg:items-start lg:w-1/2">
         <h1 className="text-2xl text-white font-semibold lg:text-5xl">
           Transformando ideias em <br />
           <strong className="text-pallet-red"> aplicações reais </strong>
@@ -44,7 +44,7 @@ export default function Home() {
             Contato
           </Link>
         </footer>
-      </section>
+      </aside>
 
       <CircularText />
     </Container>
