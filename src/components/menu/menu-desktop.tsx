@@ -10,7 +10,7 @@ import { Award, Home, Mail, User } from "lucide-react";
 import { MenuItem } from "./menu-item";
 
 // -> Images
-import logo from "@/assets/logo-portifolio.svg";
+import logo from "@/assets/icons/logo-portifolio.svg";
 
 export function MenuDesktop() {
   return (

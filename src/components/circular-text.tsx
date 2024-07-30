@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // -> Images
-import logo from "@/assets/circle-persona.svg";
+import logo from "@/assets/icons/circle-persona.svg";
 
 export function CircularText() {
   return (

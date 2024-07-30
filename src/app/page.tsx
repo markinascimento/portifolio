@@ -10,7 +10,7 @@ import { Container } from "@/components/container";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
 
 // -> Images
-import img from "@/assets/img.webp";
+import img from "@/assets/images/img.webp";
 
 export default function Home() {
   return (

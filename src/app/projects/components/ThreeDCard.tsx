@@ -8,7 +8,7 @@ import Link from "next/link";
 import { CardBody, CardContainer, CardItem } from "@/components/3d-card";
 
 // -> Icons
-import githubIcon from "@/assets/github.png";
+import githubIcon from "@/assets/images/github.png";
 
 // -> Types
 interface IThreeDCardDemoProps {

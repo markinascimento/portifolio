@@ -14,9 +14,9 @@ import { SocialButtonLink } from "@/components/social-button-link";
 import { Textarea } from "@/components/text-area";
 
 // -> Images
-import github from "@/assets/github.png";
-import linkedin from "@/assets/linkedin.png";
-import whatsapp from "@/assets/whatsapp.png";
+import github from "@/assets/images/github.png";
+import linkedin from "@/assets/images/linkedin.png";
+import whatsapp from "@/assets/images/whatsapp.png";
 
 export default function Contact() {
   const { errors, isValid, isLoading, register, handleSubmit } =

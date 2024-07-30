@@ -19,7 +19,7 @@ export default function Projects() {
 
       <main className="grid grid-cols-1 gap-8 w-full md:grid-cols-2 pb-4">
         <ThreeDCardDemo
-          link="todo-list-livid-one-54.vercel.app"
+          link="https://todo-list-livid-one-54.vercel.app/"
           github="https://github.com/markinascimento/todo-list"
           title="Todo List"
           description="Uma aplicação intuitiva que ajuda você a organizar suas tarefas
@@ -27,7 +27,7 @@ export default function Projects() {
         />
 
         <ThreeDCardDemo
-          link="todo-list-livid-one-54.vercel.app"
+          link="https://todo-list-livid-one-54.vercel.app/"
           github="https://github.com/markinascimento/todo-list"
           title="Todo List"
           description="Uma aplicação intuitiva que ajuda você a organizar suas tarefas
@@ -35,7 +35,7 @@ export default function Projects() {
         />
 
         <ThreeDCardDemo
-          link="todo-list-livid-one-54.vercel.app"
+          link="https://todo-list-livid-one-54.vercel.app/"
           github="https://github.com/markinascimento/todo-list"
           title="Todo List"
           description="Uma aplicação intuitiva que ajuda você a organizar suas tarefas
@@ -43,7 +43,7 @@ export default function Projects() {
         />
 
         <ThreeDCardDemo
-          link="todo-list-livid-one-54.vercel.app"
+          link="https://todo-list-livid-one-54.vercel.app/"
           github="https://github.com/markinascimento/todo-list"
           title="Todo List"
           description="Uma aplicação intuitiva que ajuda você a organizar suas tarefas

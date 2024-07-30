@@ -16,12 +16,12 @@ import { cn } from "@/lib/utils";
 import { MenuItem } from "./menu-item";
 
 // -> Images
-import closeMenuIcon from "@/assets/burguer-bitten-icon.svg";
-import openMenuIcon from "@/assets/burguer-icon.svg";
-import github from "@/assets/github.png";
-import linkedin from "@/assets/linkedin.png";
-import logo from "@/assets/logo-portifolio.svg";
-import whatsapp from "@/assets/whatsapp.png";
+import closeMenuIcon from "@/assets/icons/burguer-bitten-icon.svg";
+import openMenuIcon from "@/assets/icons/burguer-icon.svg";
+import logo from "@/assets/icons/logo-portifolio.svg";
+import github from "@/assets/images/github.png";
+import linkedin from "@/assets/images/linkedin.png";
+import whatsapp from "@/assets/images/whatsapp.png";
 import { SocialButtonLink } from "../social-button-link";
 
 export function MenuMobile() {
