@@ -52,7 +52,7 @@ export default function RootLayout({
             <MenuDesktop />
           </section>
 
-          <section className="flex w-full max-w-[1304px] h-[89vh] m-auto overflow-x-hidden">
+          <section className="flex w-full h-[89vh] m-auto overflow-x-hidden">
             <AnimatePresence mode="wait">
               <motion.div key={pathname}>
                 <div className="w-screen h-full relative">
