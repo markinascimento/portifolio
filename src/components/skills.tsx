@@ -1,52 +1,46 @@
-"use client";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { motion } from "framer-motion";
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
-interface iSkillProps {
-  name: string;
-  y: string;
-  x: string;
-}
+// import required modules
+import { Autoplay, EffectCoverflow } from 'swiper/modules';
 
-const Skill = ({ name, x, y }: iSkillProps) => {
-  return (
-    <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-pallet-red text-white
-      px-10 py-4 cursor-pointer"
-      whileHover={{ scale: 1.15 }}
-      initial={{ x: 0, y: 0 }}
-      animate={{ x: x, y: y }}
-      transition={{ duration: 1.5 }}
-    >
-      {name}
-    </motion.div>
-  );
-};
 
 export function Skills() {
   return (
-    <>
-      <div
-        className="w-full  bg-red-500 relative flex items-center justify-center rounded-full 
-        bg-circular-light"
+    <div className='w-full h-full'>
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 30,
+          stretch: 0,
+          depth: 300,
+          modifier: 2,
+          slideShadows: true,
+        }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, EffectCoverflow]}
+        className="w-screen max-w-[384px] bg-red-500 mx-auto p-8"
       >
-        <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-pallet-red text-white
-          px-10 py-4 cursor-pointer"
-          whileHover={{ scale: 1.15 }}
-        >
-          Web
-        </motion.div>
-
-        <Skill name="HTML" x="-20vw" y="-10vw" />
-        <Skill name="CSS" x="-5vw" y="10vw" />
-        <Skill name="Javascript" x="20vw" y="6vw" />
-        <Skill name="ReactJS" x="0vw" y="12vw" />
-        <Skill name="NextJS" x="-20vw" y="15vw" />
-        <Skill name="Web Design" x="32vw" y="-5vw" />
-        <Skill name="Figma" x="0vw" y="20vw" />
-        <Skill name="Firebase" x="-25vw" y="19vw" />
-      </div>
-    </>
-  );
+        <SwiperSlide className='flex items-center justify-center rounded-2xl text-white bg-blue-500 border-4 max-w-48 min-h-48'>Slide 1</SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center rounded-2xl text-white bg-orange-500 border-4 max-w-48 min-h-48'>Slide 2</SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center rounded-2xl text-white bg-pallet-primary border-4 max-w-48 min-h-48'>Slide 3</SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center rounded-2xl text-white bg-pallet-primary border-4 max-w-48 min-h-48'>Slide 4</SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center rounded-2xl text-white bg-pallet-primary border-4 max-w-48 min-h-48'>Slide 5</SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center rounded-2xl text-white bg-pallet-primary border-4 max-w-48 min-h-48'>Slide 6</SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center rounded-2xl text-white bg-pallet-primary border-4 max-w-48 min-h-48'>Slide 7</SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center rounded-2xl text-white bg-pallet-primary border-4 max-w-48 min-h-48'>Slide 8</SwiperSlide>
+        <SwiperSlide className='flex items-center justify-center rounded-2xl text-white bg-pallet-primary border-4 max-w-48 min-h-48'>Slide 9</SwiperSlide>
+      </Swiper>
+    </div>
+  )
 }
