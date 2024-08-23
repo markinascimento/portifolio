@@ -13,7 +13,7 @@ export default function About() {
 
       <Skills />
 
-      <div className="w-full max-w-[1024x] mx-auto px-4 mt-8">
+      <div className="w-full max-w-[1024x] mx-auto mt-8">
         <TimelineExperience
           company="@armazémPB"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur commodi expedita reiciendis ullam quis eos doloribus maiores officiis quam quidem, placeat dignissimos minima nostrum enim laborum nisi saepe porro!"
