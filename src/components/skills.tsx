@@ -24,28 +24,31 @@ export function Skills() {
           rotate: 30,
           stretch: 0,
           depth: 300,
-          modifier: 4,
+          modifier: 1,
           slideShadows: true,
         }}
         autoplay={{
-          delay: 3000,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, EffectCoverflow]}
-        className="w-screen max-w-[384px] mx-auto p-8"
+        className="w-full max-w-[768px] mx-auto px-4"
       >
         {listSkills.map((skill) => (
           <SwiperSlide
             key={skill.name}
-            className="max-w-48 min-h-48 rounded-2xl bg-pallet-secondary border-4 border-pallet-cyan"
+            className="max-w-48 min-h-48 rounded-2xl bg-pallet-primary border-4 border-pallet-cyan"
           >
-            <div className="flex items-center justify-center max-w-48 min-h-48">
+            <div className="flex flex-col gap-1 items-center justify-center max-w-48 min-h-48">
               <Image
                 src={skill.image}
                 alt={`Tecnologia ${skill.name}`}
                 className="w-32 h-32 rounded-lg"
                 priority
               />
+              <strong className="text-pallet-cyan tracking-[4px]">
+                {skill.name}
+              </strong>
             </div>
           </SwiperSlide>
         ))}

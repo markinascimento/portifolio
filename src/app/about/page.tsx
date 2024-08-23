@@ -11,9 +11,7 @@ export default function About() {
         <span> dwqdwqkjh </span>
       </main>
 
-      <section className="flex flex-1 w-full">
-        <Skills />
-      </section>
+      <Skills />
     </Container>
   );
 }

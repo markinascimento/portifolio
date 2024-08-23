@@ -11,6 +11,7 @@ const config: Config = {
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
         "spin-slow": "spin 5s linear infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
       backgroundImage: {
         background: "linear-gradient(307deg, #495867 6.91%, #577399 76.39%)",
@@ -36,6 +37,10 @@ const config: Config = {
             transform: "rotate(215deg) translateX(-500px)",
             opacity: "0",
           },
+        },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
       },
     },
