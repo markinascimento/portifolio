@@ -13,7 +13,7 @@ export function TransitionPageSlider({ position }: ITransitionPageSliderProps) {
   return (
     <motion.div
       className={cn(
-        "absolute inset-0 h-screen w-screen bg-pallet-secondary",
+        "absolute inset-0 h-screen w-screen bg-pallet-secondary z-50",
         position === "bottom" ? "origin-bottom" : "origin-top"
       )}
       initial={{ scaleY: position === "bottom" ? 0 : 1 }}
