@@ -25,8 +25,11 @@ export function ThreeDCardDemo({
   github,
 }: IThreeDCardDemoProps) {
   return (
-    <CardContainer className="px-4">
-      <CardBody className="bg-pallet-secondary relative p-6 w-auto h-auto rounded-xl sm:w-[30rem] hover:shadow-2xl">
+    <CardContainer className="px-4 relative">
+      <CardBody 
+        className="border-2 border-r-8 border-b-8 border-[#414141] border-r-zinc-100 
+        border-b-zinc-100 relative p-6 w-auto h-auto rounded-xl sm:w-[30rem] hover:shadow-2xl"
+        >
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -68,7 +71,7 @@ export function ThreeDCardDemo({
             as={Link}
             href={github}
             target="__blank"
-            className="flex items-center gap-2 bg-pallet-primary font-medium tracking-[0.5px] px-4 py-2 rounded-full text-pallet-white hover:opacity-60 transition-opacity"
+            className="flex items-center gap-2 bg-white font-bold tracking-[1.5px] text-sm px-4 py-2 rounded-full text-zinc-900 hover:opacity-60 transition-opacity"
           >
             <Image
               src={githubIcon}

@@ -1,20 +1,15 @@
 "use client";
 
 // -> Components
+import { Container } from "@/components/container";
 import { ThreeDCardDemo } from "./components/ThreeDCard";
 
 export default function Projects() {
   return (
-    <div className="w-full h-full overflow-y-auto p-4">
-      <header className="flex flex-col w-full pt-4">
-        <h1 className="text-xl text-white font-semibold lg:text-4xl">
-          Meus trabalhos
-        </h1>
-
-        <h2 className="font-medium text-gray-300">
-          Esses são alguns dos projetos que trabalhei recentemente.
-        </h2>
-      </header>
+    <Container className="space-y-4 overflow-y-auto">
+      <h1 className="text-2xl text-center text-white font-semibold lg:text-4xl">
+        Meus trabalhos
+      </h1>
 
       <main className="grid grid-cols-1 gap-8 w-full md:grid-cols-2 pb-4">
         <ThreeDCardDemo
@@ -49,6 +44,6 @@ export default function Projects() {
           diárias de forma prática e eficiente."
         />
       </main>
-    </div>
+    </Container>
   );
 }

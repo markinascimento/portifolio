@@ -23,7 +23,7 @@ export default function Contact() {
     useContactController();
 
   return (
-    <Container className="w-full h-full px-2 lg:px-0">
+    <Container className="flex items-center justify-center h-full">
       <main className="space-y-4 w-full max-w-[568px] px-2">
         <form
           onSubmit={handleSubmit}

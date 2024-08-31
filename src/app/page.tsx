@@ -14,7 +14,7 @@ import img from '@/assets/images/img.webp';
 
 export default function Home() {
   return (
-    <Container className='overflow-auto'>
+    <Container className='lg:overflow-y-hidden'>
       <main className="grid grid-cols-1 lg:grid-cols-2 m-auto w-full h-[90vh] lg:h-[100vh]">
         <section className='flex items-center justify-center'>
           <Image src={img} alt="Foto pessoal" priority   />
@@ -27,7 +27,7 @@ export default function Home() {
           </h1>
 
           <TextGenerateEffect
-            className="w-full text-zinc-300 text-left font-medium tracking-[-0.5px] break-words lg:max-w-[615px]"
+            className="w-full text-zinc-300 text-left font-semibold tracking-[-0.5px] break-words lg:max-w-[615px]"
             words="Como desenvolvedor frontend com +3 anos de experiência, meu foco é transformar ídeias em 
             interfaces web atrativas e funcionais. Utilizando as melhores tecnologias e práticas do mercado, como ReactJS,
             me dedico a criar experiência envolventes e cativantes para os usuários."

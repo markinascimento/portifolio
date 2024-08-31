@@ -40,7 +40,7 @@ export default function RootLayout({
         )}
       >
         <QueryClientProvider client={queryClient}>
-          <div className="w-full h-[90vh] lg:h-full lg:pr-16">
+          <div className="w-full h-[95vh] p-4 lg:h-full">
             {children}
           </div>
 
