@@ -1,5 +1,5 @@
 // -> Components
-import { Timeline } from "@/components/menu/timeline";
+import { Timeline } from "@/components/timeline";
 
 // -> Types
 interface TimelineExperienceProps {

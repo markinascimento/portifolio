@@ -8,22 +8,17 @@ import { usePathname } from "next/navigation";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 // -> Motion lib
-import { AnimatePresence, motion } from "framer-motion";
 
 // -> Toast lib
-import { Toaster } from "react-hot-toast";
 
 // -> Utils
 import { cn } from "@/lib/utils";
 
 // -> Styles CSS
+import { Navigation } from "@/components/navigation";
 import "./globals.css";
 
 // -> Components
-import { MenuDesktop } from "@/components/menu/menu-desktop";
-import { MenuMobile } from "@/components/menu/menu-mobile";
-import { Meteors } from "@/components/meteors";
-import { TransitionPageSlider } from "@/components/transition-page-slider";
 
 const soraFont = Sora({ subsets: ["latin"], weight: "400" });
 
@@ -40,34 +35,39 @@ export default function RootLayout({
     <html lang="pt-BR" className="h-full w-full">
       <body
         className={cn(
-          "flex flex-col flex-1 w-full h-full bg-background lg:gap-2",
+          "w-full max-w-[1268px] h-full overflow-hidden bg-[#222] text-zinc-100 relative mx-auto",
           soraFont.className
         )}
       >
         <QueryClientProvider client={queryClient}>
-          <Toaster />
+          <div className="w-full h-[90vh] lg:h-full lg:pr-16">
+            {children}
+          </div>
 
-          <section className="w-full min-h-16">
-            <MenuMobile />
-            <MenuDesktop />
-          </section>
-
-          <section className="flex w-full h-[89vh] m-auto overflow-x-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div key={pathname}>
-                <div className="w-screen h-full relative">
-                  <Meteors number={20} />
-
-                  {children}
-                </div>
-
-                <TransitionPageSlider position="bottom" />
-                <TransitionPageSlider position="top" />
-              </motion.div>
-            </AnimatePresence>
-          </section>
+          <Navigation />
         </QueryClientProvider>
       </body>
     </html>
   );
 }
+
+// <html lang="pt-BR" className="h-full w-full">
+// <body
+//   className={cn(
+//     "flex flex-col flex-1 w-full h-full overflow-y-hidden bg-background",
+//     soraFont.className
+//   )}
+// >
+//   <QueryClientProvider client={queryClient}>
+//     <main className="bg-red-500 w-full h-[90vh]">
+//       <Toaster />
+
+//       <Meteors number={20} />
+
+//       {children}
+
+//       <Navigation />
+//     </main>
+//   </QueryClientProvider>
+// </body>
+// </html>

@@ -1,12 +1,11 @@
 "use client";
 
 // -> Components
-import { Container } from "@/components/container";
 import { ThreeDCardDemo } from "./components/ThreeDCard";
 
 export default function Projects() {
   return (
-    <Container className="justify-start gap-4 max-w-[1048px] px-3 m-auto lg:flex-col">
+    <div className="w-full h-full overflow-y-auto p-4">
       <header className="flex flex-col w-full pt-4">
         <h1 className="text-xl text-white font-semibold lg:text-4xl">
           Meus trabalhos
@@ -50,6 +49,6 @@ export default function Projects() {
           diárias de forma prática e eficiente."
         />
       </main>
-    </Container>
+    </div>
   );
 }

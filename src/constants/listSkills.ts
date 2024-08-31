@@ -28,7 +28,7 @@ export const listSkills = [
     image: typescriptIcon,
   },
   {
-    name: "Typescript",
+    name: "ReactJS",
     image: reactIcon,
   },
   {
