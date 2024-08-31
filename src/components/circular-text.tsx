@@ -16,7 +16,7 @@ export function CircularText() {
 
       <Link
         href="/contact"
-        className="bg-pallet-secondary flex items-center justify-center absolute h-20 w-20 rounded-full"
+        className="bg-[#333] flex items-center justify-center absolute h-20 w-20 rounded-full"
       >
         <small className="text-zinc-100 font-semibold ">Contato</small>
       </Link>

@@ -28,7 +28,7 @@ export function Navigation (){
             key={index}
             href={link.path}
             className={cn(
-              'relative flex items-center group transition-all duration-300',
+              'relative flex items-center group transition-all duration-300 lg:rounded-full',
               pathname === link.path && 'text-pallet-red'
             )}
           >
@@ -47,8 +47,8 @@ export function Navigation (){
             </div>
 
             <div className={cn(
-              '-translate-y-2 relative transition-transform duration-500',
-              pathname === link.path && "top-0 translate-y-0"
+              '-translate-y-2 relative transition-transform duration-500 lg:translate-y-0',
+              pathname === link.path && "top-0"
             )}>{link.icon}</div>
           </Link>
         );

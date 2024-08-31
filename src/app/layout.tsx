@@ -50,24 +50,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// <html lang="pt-BR" className="h-full w-full">
-// <body
-//   className={cn(
-//     "flex flex-col flex-1 w-full h-full overflow-y-hidden bg-background",
-//     soraFont.className
-//   )}
-// >
-//   <QueryClientProvider client={queryClient}>
-//     <main className="bg-red-500 w-full h-[90vh]">
-//       <Toaster />
-
-//       <Meteors number={20} />
-
-//       {children}
-
-//       <Navigation />
-//     </main>
-//   </QueryClientProvider>
-// </body>
-// </html>

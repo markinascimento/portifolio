@@ -18,9 +18,8 @@ export function Container({ className, children }: ContainerProps) {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 5 }}
+      transition={{ duration: 3 }}
       className={cn(
-        "flex flex-col items-center justify-center w-full h-[88vh] lg:flex-row",
         className
       )}
     >

@@ -20,9 +20,10 @@ export const Textarea = forwardRef<HTMLTextAreaElement, ITextareaProps>(
         <textarea
           {...rest}
           ref={ref}
+
           className={cn(
-            `bg-pallet-secondary w-full font-medium min-h-28 resize-none rounded-lg lg:h-[52px]
-            outline-none border-2 border-transparent focus:border-pallet-cyan p-4 text-zinc-100`,
+            `bg-[#333] w-full font-medium min-h-28 resize-none rounded-lg lg:h-[52px]
+            outline-none border-2 border-transparent focus:border-zinc-100 p-4 text-zinc-100`,
             error && "border-red-700 text-red-700",
             className
           )}
