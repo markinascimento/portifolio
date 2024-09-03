@@ -27,8 +27,8 @@ export function ThreeDCardDemo({
   return (
     <CardContainer className="px-4 relative">
       <CardBody 
-        className="border-2 border-r-8 border-b-8 border-[#414141] border-r-zinc-100 
-        border-b-zinc-100 relative p-6 w-auto h-auto rounded-xl sm:w-[30rem] hover:shadow-2xl"
+        className="border-2 border-r-8 border-b-8 border-zinc-100 border-r-zinc-100 
+        border-b-zinc-100 relative p-3 w-auto h-auto rounded-xl sm:w-[30rem] hover:shadow-2xl"
         >
         <CardItem
           translateZ="50"

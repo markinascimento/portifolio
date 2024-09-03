@@ -20,7 +20,7 @@ export function Container({ className, children }: ContainerProps) {
       animate={{ opacity: 1 }}
       transition={{ duration: 3 }}
       className={cn(
-        "w-full h-full overflow-y-auto p-4 lg:pr-16",
+        "w-full h-full overflow-y-auto lg:pr-16",
         className
       )}
     >

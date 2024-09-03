@@ -21,7 +21,7 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col items-center justify-center w-full h-full px-4 gap-4 lg:items-start ">
-          <h1 className="text-2xl text-white font-semibold lg:text-4xl">
+          <h1 className="text-2xl text-white font-semibold tracking-[1px] lg:text-4xl">
             Transformando ideias em <br />
             <strong className="text-pallet-red">aplicações reais</strong>
           </h1>

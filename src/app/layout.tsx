@@ -35,12 +35,12 @@ export default function RootLayout({
     <html lang="pt-BR" className="h-full w-full">
       <body
         className={cn(
-          "w-full max-w-[1268px] h-full overflow-hidden bg-[#222] text-zinc-100 relative mx-auto",
+          "w-full max-w-[1268px] h-full overflow-hidden bg-[#444] text-zinc-100 relative mx-auto",
           soraFont.className
         )}
       >
         <QueryClientProvider client={queryClient}>
-          <div className="w-full h-[95vh] p-4 lg:h-full">
+          <div className="w-full h-[90vh] p-4 lg:h-full">
             {children}
           </div>
 

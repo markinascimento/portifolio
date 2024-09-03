@@ -14,7 +14,7 @@ export function Navigation (){
   return (
   <nav 
     className="flex flex-col items-center lg:justify-center gap-y-4 absolute h-max bottom-0 p-2 mt-auto lg:right-[17px] z-50
-    top-0 w-full lg:w-16 lg:max-w-md lg:h-screen bg-[#222]"
+    top-0 w-full lg:w-16 lg:max-w-md lg:h-screen bg-[#444]"
   >
     <div 
       className="flex w-full max-w-[100vh] items-center justify-around gap-y-10 px-4 rounded-full text-3xl h-16 py-8 backdrop-blur-sm bg-[#333]
@@ -51,7 +51,7 @@ export function Navigation (){
             <section 
               className={cn(
                 '-translate-y-2 relative transition-transform duration-500 lg:translate-y-0',
-                pathname === path && "top-0"
+                pathname === path && "top-0 -translate-y-0"
               )}
             >
               <Icon/>
